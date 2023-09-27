@@ -1,0 +1,19 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Assets/Editor/TaskList/TaskList.uss?fileID=7433441132597879392&amp;guid=29bbc85ecb815a7448654698f74dd085&amp;type=3#TaskList" />
+    <ui:VisualElement name="Root" focusable="true" style="flex-grow: 1; height: initial;">
+        <ui:VisualElement name="TopSection" style="margin-left: 4px; margin-right: 4px; margin-top: 4px; margin-bottom: 4px;">
+            <ui:Label text="Cool Task List" name="Title" style="-unity-text-align: upper-center; font-size: 30px; -unity-font-style: bold;" />
+            <ui:VisualElement name="TaskListPickerSection" style="flex-direction: row; justify-content: space-between; margin-bottom: 6px; margin-top: 4px;">
+                <uie:ObjectField name="TaskListPicker" type="TaskListSO, Assembly-CSharp-Editor" />
+                <TaskListDropdown name="TaskListDropdown" />
+            </ui:VisualElement>
+            <ui:VisualElement name="NewTaskSection" style="flex-direction: row; justify-content: center; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;">
+                <ui:TextField picking-mode="Ignore" name="NewTaskField" style="justify-content: flex-start; flex-grow: 1;" />
+                <ui:Button text="Add New Task" display-tooltip-when-elided="true" name="NewTaskButton" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="ListSection" style="background-color: rgb(42, 42, 42); height: initial; border-left-color: rgb(13, 13, 13); border-right-color: rgb(13, 13, 13); border-top-color: rgb(13, 13, 13); border-bottom-color: rgb(13, 13, 13); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; margin-left: 8px; margin-right: 8px; margin-top: 8px; margin-bottom: 8px; flex-grow: 1; flex-basis: 100%;">
+            <ui:ListView focusable="true" reorder-mode="Animated" name="TaskList" style="flex-grow: 0;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
